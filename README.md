@@ -1,37 +1,35 @@
 # my-programming-note
 
-## Index 目錄
-* [Intro 簡介](#intro-簡介)
+* [Data Structure 資料結構](/note/data-structure.md)
 
-### Big O Notation
+* [Algorithm 演算法](/note/algorithm.md)
 
-* [Big O Notation](/note/others//BigO-Notation.md)
+* [Design Pattern 設計模式](/note/design-pattern.md)
 
-### Data Struture 資料結構
+---
 
-* [Data Structure Intro 資料結構簡介](/note/data-structure/README.md)
-* [Array 陣列](/note/data-structure/Array.md)
-* [LinkedList 連結串列](/note/data-structure/LinkedList.md)
-* [Stack 堆疊](/note/data-structure/Stack.md)
-* [Queue 佇列](/note/data-structure/Queue.md)
-* [Binary Tree 二元樹](/note/data-structure/BinaryTree.md)
-* [Heap 堆積](/note/data-structure/Heap.md)
-* [Map 對映 / Dictionary 字典](/note/data-structure/Map_Dictionary.md)
-* [Hash 雜湊 / HashSet / HashMap](/note/data-structure/Hash_HashSet_HashMap.md)
-* [Graph 圖形](/note/data-structure/Graph.md)
+## Big-O
+Big O 是以 n 為 input 計算演算法時間函式的上限 (Upper bound)，以最壞狀況下 (worst scenario) 演算法的執行時間效率。
 
-### Algorithm 演算法
+以下為其他漸進符號 (Asymptotic Notation):
+* `Big-O( Ο )` - worst case
+* `Omega( Ω )` - best case
+* `Theta( θ )` - average case
 
-* [Algorithm Intro 演算法簡介](/note/algorithm/README.md)
+### Big-O Complexity Chart
+![Big-O Complexity Chart](/image/Big-O%20Complexity%20Chart.png)
 
-### Design Pattern 設計模式
+|Name|Time Complexity|
+|---|---|
+|Constant Time|O(1)|
+|Logarithmic Time|O(log n)|
+|Linear Time|O(n)|
+|Quasilinear Time|O(n log n)|
+|Quadratic Time|O(n^2)|
+|Exponential Time|O(2^n)|
+|Factorial Time|O(n!)|
 
-* [Design Pattern Intro 設計模式簡介](/note/design-pattern/README.md)
+### Common Data Structure Operations
+![Big-O Complexity Chart](/image/Common%20Data%20Structure%20Operation.png)
 
-### Others 其他知識
-
-* [Thread & Concurrency 執行緒 & 併發](/note/others//Thread_Concurrency.md)
-* [Unit Test 單元測試](/note/others//Unit-Test.md)
-* [CI/CD 持續整合/持續佈署](/note/others//CICD.md)
-
-## Intro 簡介
+[reference](https://www.bigocheatsheet.com)
