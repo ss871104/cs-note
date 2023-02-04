@@ -28,8 +28,3 @@ Big O 是以 n 為 input 計算演算法時間函式的上限 (Upper bound)，�
 |Quadratic Time|O(n^2)|
 |Exponential Time|O(2^n)|
 |Factorial Time|O(n!)|
-
-### Common Data Structure Operations
-![Big-O Complexity Chart](/image/Common%20Data%20Structure%20Operation.png)
-
-[reference](https://www.bigocheatsheet.com)

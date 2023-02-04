@@ -10,7 +10,14 @@
 * [Red-Black Tree 紅黑樹](#red-black-tree-紅黑樹)
 * [Heap 堆積](#heap-堆積)
 * [HashTable 雜湊表 / HashMap 對映 / Dictionary 字典](#hashtable-雜湊表--hashmap-對映--dictionary-字典)
-* [Graph 圖形](#graph-圖形)
+* [Graph 圖](#graph-圖)
+
+---
+
+## Common Data Structure Operations
+![Big-O Complexity Chart](/image/Common%20Data%20Structure%20Operation.png)
+
+[reference](https://www.bigocheatsheet.com)
 
 ---
 
@@ -190,6 +197,7 @@ Binary Search Tree 是一個基於 Binary Search 的樹狀資料結構，優點�
 ### **Java Implementation**
 
 * [Implementation of BST in Java](/implementation-java/src/data_structure/BinarySearchTree.java)
+* [Implementation of Recursive BST in Java](/implementation-java/src/data_structure/RecursiveBinarySearchTree.java)
 
 ---
 
@@ -322,4 +330,61 @@ Map<Integer> map2 = new ConcurrentHashMap<>();
 
 ---
 
-## Graph 圖形
+## Graph 圖
+圖 (Graph)，是一個由`邊 (edge)` 集合與`點 (vertex)` 集合所組成的資料結構。
+* vertex (點) - 可看作是資料的節點，組成圖的最基本的元素，所有的 vertex 所形成的集合為 V 或 V(G)
+* edge (邊) - 為點與點的關係，以一對 vertex 表示 edge，所有的 edge 所形成的集合為 E 或 E(G)
+
+根據 edge 是否有 `方向性` 可將 Graph 分為：
+* directed graph (有向圖) - edge 的方向性表示資料間的關係，若 vertex(A )與 vertex(B) 之關係是 `單向的`，那麼連結 vertex(A) 與 vertex(B) 的 edge 即具有方向性
+* undirected graph (無向圖) - edge 的方向性表示資料間的關係，若 vertex(A) 與 vertex(B) 的關係是 `雙向的`，那麼連結 vertex(A) 與 vertex(B) 之 edge 就不具有方向性
+
+### Graph Representations 圖的表示法
+Graph 有兩種常用的表示法：
+* **Adjacency Matrix (相鄰矩陣)**: 一個二維矩陣，若從 vertex(A) 到 vertex(B) 有 edge，則矩陣位置[A][B]值為 1，反之，則為 0
+* **Adjacency List (相鄰串列)**: 先以一個一維陣列列出所有的 vertex，再以 Linked list 表示所有與 vertex 相連的 vertex (vertex 接進 Linked list 的順序不重要，因為是 Graph 是定義成 Set)
+
+![Graph Representations](/image/Graph%20Representations.png)
+[reference](http://alrightchiu.github.io/SecondRound/graph-introjian-jie.html)
+
+#### Adjacency Matrix v.s. Adjacency List
+* **Space Complexity**
+    * Adjacency Matrix：一定會用到 `O(|V|²)`，因此，若 Graph 較為 `稠密(dense)`，各 vertex 之間的 edge 數量較多，則適合使用 Adjacency Matrix
+    * Adjacency List：將使用 `O(|V|+|E|)`，因此，若 Graph 較為 `稀疏(sparse)`，edge 數量較少，則適合使用 Adjacency List。
+* **Add vertex**
+    * Adjacency Matrix：在二維陣列中新增一筆資料，需要 `O(|V|²)`
+    * Adjacency List：在 list 中新增一筆資料，只需要 `O(1)`
+* **Remove vertex**
+    * Adjacency Matrix：在二維陣列中刪除一筆資料，需要 `O(|V|²)`
+    * Adjacency List：刪除資料後需每一個 list 檢查是否有刪掉的那一筆資料，因此需要 `O(|V|+|E|)`
+* **Add edge**
+    * Adjacency Matrix：在 Matrix 中增加一條 edge 僅僅是把矩陣中相對應位置的值從 0 設成 1，只需要 `O(1)`
+    * Adjacency List：若是只將一對 vertex 相連同樣只需要 `O(1)`，但是 worst case 中，要將某個 vertex 與其他 vertex 全部相連，會需要 `O(|E|)`
+ * **Remove Edge**
+    * Adjacency Matrix：在 Matrix 中刪除 edge 僅僅是把矩陣中相對應位置的值從 1 設成 0，只需要 `O(1)`
+    * Adjacency List： 如同在 Linked list 中刪除資料，需要 `O(|E|)`
+
+
+### **Abstract Data Type Method**
+
+#### Adjacency Matrix
+
+|Method|BigO|
+|---|---|
+|Add Vertex 新增點|O(V²)|
+|Remove Vertex 刪除點|O(1)|
+|Add Edge 新增邊|O(V²)|
+|Remove Edge 刪除邊|O(1)|
+
+#### Adjacency List
+
+|Method|BigO|
+|---|---|
+|Add Vertex 新增點|O(1)|
+|Remove Vertex 刪除點|O(V+E)|
+|Add Edge 新增邊|O(E)|
+|Remove Edge 刪除邊|O(E)|
+
+### **Java Implementation**
+
+* [Implementation of Graph (Adjacency List) in Java](/implementation-java/src/data_structure/Graph.java)
