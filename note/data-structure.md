@@ -336,8 +336,8 @@ Map<Integer> map2 = new ConcurrentHashMap<>();
 * edge (邊) - 為點與點的關係，以一對 vertex 表示 edge，所有的 edge 所形成的集合為 E 或 E(G)
 
 根據 edge 是否有 `方向性` 可將 Graph 分為：
-* directed graph (有向圖) - edge 的方向性表示資料間的關係，若 vertex(A )與 vertex(B) 之關係是 `單向的`，那麼連結 vertex(A) 與 vertex(B) 的 edge 即具有方向性
-* undirected graph (無向圖) - edge 的方向性表示資料間的關係，若 vertex(A) 與 vertex(B) 的關係是 `雙向的`，那麼連結 vertex(A) 與 vertex(B) 之 edge 就不具有方向性
+* **directed graph (有向圖)** - edge 的方向性表示資料間的關係，若 vertex(A )與 vertex(B) 之關係是 `單向的`，那麼連結 vertex(A) 與 vertex(B) 的 edge 即具有方向性
+* **undirected graph (無向圖)** - edge 的方向性表示資料間的關係，若 vertex(A) 與 vertex(B) 的關係是 `雙向的`，那麼連結 vertex(A) 與 vertex(B) 之 edge 就不具有方向性
 
 ### Graph Representations 圖的表示法
 Graph 有兩種常用的表示法：
