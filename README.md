@@ -1,4 +1,4 @@
-# my-programming-note
+# cs-note
 
 * [Data Structure 資料結構](/note/data-structure.md)
 
