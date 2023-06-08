@@ -17,6 +17,8 @@
     * [DFS 深度優先搜尋 for graph](#dfs-depth-first-search-深度優先搜尋-for-graph)
     * [Dijkstra’s Algorithm](#dijkstras-algorithm)
 
+* [Dynamic Programming 動態規劃](#dynamic-programming-動態規劃)
+
 ---
 
 ## Sorting Algorithm 排序演算法
@@ -97,4 +99,9 @@
 
 
 ### Dijkstra’s Algorithm
+
+
+---
+
+## Dynamic Programming 動態規劃
 
