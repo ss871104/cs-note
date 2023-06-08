@@ -67,14 +67,14 @@
 ## Tree Traversal 樹的遍歷
 **Tree Traversal** 是指對樹中的所有節點進行訪問，並且每個節點僅訪問一次。其中有 `BFS` 和 `DFS` 兩種搜尋方式。
 
-### BFS (Breadth First Search) 廣度優先搜尋 for tree
+### BFS (Breadth-First-Search) 廣度優先搜尋 for tree
 **BFS** 是從起始的節點開始，要先搜尋完第一層所有的節點後 (相鄰的節點)，才開始搜尋下一層的節點，所以整個搜尋會從起點向外層層擴展。可以用 Queue 實現。
 
 #### **Java Implementation**
 
 * [Implementation of BFS in Java](/implementation-java/src/tree_traversal/BFS.java)
 
-### DFS (Depth First Search) 深度優先搜尋 for tree
+### DFS (Depth-First-Search) 深度優先搜尋 for tree
 **DFS** 是從根節點(樹的情況)，或任意節點(圖的情況)開始，盡可能搜尋所有可以抵達的子節點，直到分支的盡頭、沒有子節點的地方，再回溯進行同樣的搜尋。可以用 Recursion or Stack 實現。其中有 `PreOrder 前序`, `PostOrder 後序`, `InOrder 中序` 三種不同順序的訪問方式。
 
 * **DFS PreOrder:** DFS 前序遍歷是從根節點開始往左邊的節點向下擴展，直到左邊沒有節點便會去搜尋前一個節點的右節點，並繼續搜尋他的左節點，持續進行同樣的搜尋。
